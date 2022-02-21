@@ -29,6 +29,7 @@ public class Usuario {
     private String numeroTarjeta;
     private String fechaExpiracionTarjeta;
     private String cvvTarjeta;
+    private LocalDateTime fechaCreacion;
 
     public Usuario(Long id, String nombre, String email, String telefono, String ocupacion, String clave, String tipoTarjeta, String nombrePropietarioTarjeta, String numeroTarjeta, String fechaExpiracionTarjeta, String cvvTarjeta) {
         validarObligatorio(nombre, SE_DEBE_INGRESAR_EL_NOMBRE_DE_USUARIO);

@@ -12,8 +12,15 @@ public class FabricaUsuario {
         return new Usuario(
                 comandoUsuario.getId(),
                 comandoUsuario.getNombre(),
+                comandoUsuario.getEmail(),
+                comandoUsuario.getTelefono(),
+                comandoUsuario.getOcupacion(),
                 comandoUsuario.getClave(),
-                comandoUsuario.getFecha()
+                comandoUsuario.getTipoTarjeta(),
+                comandoUsuario.getNombrePropietarioTarjeta(),
+                comandoUsuario.getNumeroTarjeta(),
+                comandoUsuario.getFechaExpiracionTarjeta(),
+                comandoUsuario.getCvvTarjeta()
         );
     }
 

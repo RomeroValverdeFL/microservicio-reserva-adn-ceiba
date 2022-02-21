@@ -15,6 +15,13 @@ public class ComandoUsuario{
 
     private Long id;
     private String nombre;
+    private String email;
+    private String telefono;
+    private String ocupacion;
     private String clave;
-    private LocalDateTime fecha;
+    private String tipoTarjeta;
+    private String nombrePropietarioTarjeta;
+    private String numeroTarjeta;
+    private String fechaExpiracionTarjeta;
+    private String cvvTarjeta;
 }

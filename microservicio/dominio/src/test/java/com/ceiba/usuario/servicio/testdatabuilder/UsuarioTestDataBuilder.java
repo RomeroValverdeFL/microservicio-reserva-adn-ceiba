@@ -7,14 +7,20 @@ import java.time.LocalDateTime;
 public class UsuarioTestDataBuilder {
 
     private Long id;
-    private String nombreUsuario;
+    private String nombre;
+    private String email;
+    private String telefono;
+    private String ocupacion;
     private String clave;
-    private LocalDateTime fecha;
+    private String tipoTarjeta;
+    private String nombrePropietarioTarjeta;
+    private String numeroTarjeta;
+    private String fechaExpiracionTarjeta;
+    private String cvvTarjeta;
 
     public UsuarioTestDataBuilder() {
-        nombreUsuario = "1234";
+        nombre = "1234";
         clave = "1234";
-        fecha = LocalDateTime.now();
     }
 
     public UsuarioTestDataBuilder conClave(String clave) {
@@ -38,6 +44,6 @@ public class UsuarioTestDataBuilder {
     }
 
     public Usuario build() {
-        return new Usuario(id,nombreUsuario, clave,fecha);
+        return new Usuario( id,  nombre,  email,  telefono,  ocupacion,  clave,  tipoTarjeta,  nombrePropietarioTarjeta,  numeroTarjeta,  fechaExpiracionTarjeta,  cvvTarjeta);
     }
 }
