@@ -9,13 +9,16 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import java.time.LocalDateTime;
+
 public class ServicioActualizarUsuarioTest {
 
     @Test
     @DisplayName("Deberia validar la existencia previa del usuario")
     void deberiaValidarLaExistenciaPreviaDelUsuario() {
         // arrange
-        Usuario usuario = new UsuarioTestDataBuilder().conId(1L).build();
+        LocalDateTime fechaCreacion = LocalDateTime.now();
+        Usuario usuario = new UsuarioTestDataBuilder().conFechaCreacion(fechaCreacion).conId(1L).build();
         RepositorioUsuario repositorioUsuario = Mockito.mock(RepositorioUsuario.class);
         Mockito.when(repositorioUsuario.existePorId(Mockito.anyLong())).thenReturn(false);
         ServicioActualizarUsuario servicioActualizarUsuario = new ServicioActualizarUsuario(repositorioUsuario);
@@ -27,7 +30,8 @@ public class ServicioActualizarUsuarioTest {
     @DisplayName("Deberia actualizar correctamente en el repositorio")
     void deberiaActualizarCorrectamenteEnElRepositorio() {
         // arrange
-        Usuario usuario = new UsuarioTestDataBuilder().conId(1L).build();
+        LocalDateTime fechaCreacion = LocalDateTime.now();
+        Usuario usuario = new UsuarioTestDataBuilder().conFechaCreacion(fechaCreacion).conId(1L).build();
         RepositorioUsuario repositorioUsuario = Mockito.mock(RepositorioUsuario.class);
         Mockito.when(repositorioUsuario.existePorId(Mockito.anyLong())).thenReturn(true);
         ServicioActualizarUsuario servicioActualizarUsuario = new ServicioActualizarUsuario(repositorioUsuario);

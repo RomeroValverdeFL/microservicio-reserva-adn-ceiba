@@ -31,10 +31,11 @@ public class Usuario {
     private String cvvTarjeta;
     private LocalDateTime fechaCreacion;
 
-    public Usuario(Long id, String nombre, String email, String telefono, String ocupacion, String clave, String tipoTarjeta, String nombrePropietarioTarjeta, String numeroTarjeta, String fechaExpiracionTarjeta, String cvvTarjeta) {
+    public Usuario(Long id, String nombre, String email, String telefono, String ocupacion, String clave, String tipoTarjeta, String nombrePropietarioTarjeta, String numeroTarjeta, String fechaExpiracionTarjeta, String cvvTarjetaa,LocalDateTime fechaCreacion) {
         validarObligatorio(nombre, SE_DEBE_INGRESAR_EL_NOMBRE_DE_USUARIO);
         validarObligatorio(clave, SE_DEBE_INGRESAR_LA_CLAVE);
         validarLongitud(clave, LONGITUD_MINIMA_CLAVE, String.format(LA_CLAVE_DEBE_TENER_UNA_LONGITUD_MAYOR_O_IGUAL_A,LONGITUD_MINIMA_CLAVE));
+        validarObligatorio(fechaCreacion, SE_DEBE_INGRESAR_LA_FECHA_CREACION);
         this.id = id;
         this.nombre = nombre;
         this.email = email;
@@ -45,7 +46,8 @@ public class Usuario {
         this.nombrePropietarioTarjeta = nombrePropietarioTarjeta;
         this.numeroTarjeta = numeroTarjeta;
         this.fechaExpiracionTarjeta = fechaExpiracionTarjeta;
-        this.cvvTarjeta = cvvTarjeta;
+        this.cvvTarjeta = cvvTarjetaa;
+        this.fechaCreacion = fechaCreacion;
     }
 
 

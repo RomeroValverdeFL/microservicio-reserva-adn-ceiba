@@ -8,16 +8,16 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
 public class RepositorioSucursalMssql implements RepositorioSucursal {
 
-    @SqlStatement(namespace="sql/usuario/sucursal", value="crear")
+    @SqlStatement(namespace="sql/sucursal", value="crear")
     private static String sqlCrear;
 
-    @SqlStatement(namespace="sql/usuario/sucursal", value="actualizar")
+    @SqlStatement(namespace="sql/sucursal", value="actualizar")
     private static String sqlActualizar;
 
-    @SqlStatement(namespace="sql/usuario/sucursal", value="eliminar")
+    @SqlStatement(namespace="sql/sucursal", value="eliminar")
     private static String sqlEliminar;
 
-    @SqlStatement(namespace="sql/usuario/sucursal", value="existeSucursalPorNombreYDireccion")
+    @SqlStatement(namespace="sql/sucursal", value="existeSucursalPorNombreYDireccion")
     private static String sqlExisteSucursalPorNombreYDireccion;
 
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;

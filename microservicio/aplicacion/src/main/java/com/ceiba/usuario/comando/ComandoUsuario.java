@@ -12,7 +12,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ComandoUsuario{
-
     private Long id;
     private String nombre;
     private String email;
@@ -24,4 +23,5 @@ public class ComandoUsuario{
     private String numeroTarjeta;
     private String fechaExpiracionTarjeta;
     private String cvvTarjeta;
+    private LocalDateTime fechaCreacion;
 }

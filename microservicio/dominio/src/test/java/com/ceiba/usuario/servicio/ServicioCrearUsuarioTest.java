@@ -10,6 +10,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import java.time.LocalDateTime;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ServicioCrearUsuarioTest {
@@ -26,8 +28,9 @@ public class ServicioCrearUsuarioTest {
     @Test
     @DisplayName("Deberia lanzar una exepcion cuando se valide la existencia del Usuario")
     void deberiaLanzarUnaExepcionCuandoSeValideLaExistenciaDelUsuario() {
+        LocalDateTime fechaCreacion = LocalDateTime.now();
         // arrange
-        Usuario usuario = new UsuarioTestDataBuilder().build();
+        Usuario usuario = new UsuarioTestDataBuilder().conFechaCreacion(fechaCreacion).build();
         RepositorioUsuario repositorioUsuario = Mockito.mock(RepositorioUsuario.class);
         Mockito.when(repositorioUsuario.existe(Mockito.anyString())).thenReturn(true);
         ServicioCrearUsuario servicioCrearUsuario = new ServicioCrearUsuario(repositorioUsuario);
@@ -38,8 +41,9 @@ public class ServicioCrearUsuarioTest {
     @Test
     @DisplayName("Deberia Crear el usuario de manera correcta")
     void deberiaCrearElUsuarioDeManeraCorrecta() {
+        LocalDateTime fechaCreacion = LocalDateTime.now();
         // arrange
-        Usuario usuario = new UsuarioTestDataBuilder().build();
+        Usuario usuario = new UsuarioTestDataBuilder().conFechaCreacion(fechaCreacion).build();
         RepositorioUsuario repositorioUsuario = Mockito.mock(RepositorioUsuario.class);
         Mockito.when(repositorioUsuario.existe(Mockito.anyString())).thenReturn(false);
         Mockito.when(repositorioUsuario.crear(usuario)).thenReturn(10L);

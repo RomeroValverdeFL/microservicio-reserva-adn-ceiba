@@ -20,7 +20,9 @@ public class FabricaUsuario {
                 comandoUsuario.getNombrePropietarioTarjeta(),
                 comandoUsuario.getNumeroTarjeta(),
                 comandoUsuario.getFechaExpiracionTarjeta(),
-                comandoUsuario.getCvvTarjeta()
+                comandoUsuario.getCvvTarjeta(),
+                comandoUsuario.getFechaCreacion()
+
         );
     }
 

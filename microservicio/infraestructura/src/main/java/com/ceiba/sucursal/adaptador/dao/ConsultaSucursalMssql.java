@@ -17,7 +17,7 @@ public class ConsultaSucursalMssql implements DaoSucursal {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }
 
-    @SqlStatement(namespace= "sql/usuario/sucursal", value="listarPorPais")
+    @SqlStatement(namespace= "sql/sucursal", value="listarPorPais")
     private static String sqlListarPorPais;
 
     @Override

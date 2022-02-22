@@ -17,6 +17,7 @@ public class UsuarioTestDataBuilder {
     private String numeroTarjeta;
     private String fechaExpiracionTarjeta;
     private String cvvTarjeta;
+    private LocalDateTime fecha;
 
     public UsuarioTestDataBuilder() {
         nombre = "1234";
@@ -38,12 +39,12 @@ public class UsuarioTestDataBuilder {
         return this;
     }
 
-    public UsuarioTestDataBuilder conNombre(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
+    public UsuarioTestDataBuilder conNombre(String nombre) {
+        this.nombre = nombre;
         return this;
     }
 
     public Usuario build() {
-        return new Usuario( id,  nombre,  email,  telefono,  ocupacion,  clave,  tipoTarjeta,  nombrePropietarioTarjeta,  numeroTarjeta,  fechaExpiracionTarjeta,  cvvTarjeta);
+        return new Usuario( id,  nombre,  email,  telefono,  ocupacion,  clave,  tipoTarjeta,  nombrePropietarioTarjeta,  numeroTarjeta,  fechaExpiracionTarjeta,  cvvTarjeta, fecha);
     }
 }

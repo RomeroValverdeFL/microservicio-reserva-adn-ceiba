@@ -9,13 +9,21 @@ public class ComandoUsuarioTestDataBuilder {
 
     private Long id;
     private String nombre;
+    private String email;
+    private String telefono;
+    private String ocupacion;
     private String clave;
-    private LocalDateTime fecha;
+    private String tipoTarjeta;
+    private String nombrePropietarioTarjeta;
+    private String numeroTarjeta;
+    private String fechaExpiracionTarjeta;
+    private String cvvTarjeta;
+    private LocalDateTime fechaCreacion;
 
     public ComandoUsuarioTestDataBuilder() {
         nombre = UUID.randomUUID().toString();
         clave = "1234";
-        fecha = LocalDateTime.now();
+        fechaCreacion = LocalDateTime.now();
     }
 
     public ComandoUsuarioTestDataBuilder conNombre(String nombre) {
@@ -24,6 +32,11 @@ public class ComandoUsuarioTestDataBuilder {
     }
 
     public ComandoUsuario build() {
-        return new ComandoUsuario(id,nombre, clave,fecha);
+        return new ComandoUsuario(id,nombre,email,telefono, ocupacion,clave,tipoTarjeta,
+                nombrePropietarioTarjeta,
+                numeroTarjeta,
+                fechaExpiracionTarjeta,
+                cvvTarjeta,
+                fechaCreacion);
     }
 }
