@@ -20,7 +20,7 @@ public class MapeoSucursal  implements RowMapper<DtoSucursal>, MapperResult {
         Integer numeroPisos = rs.getInt("numero_pisos");
         Integer numeroHabitaciones = rs.getInt("numero_habitaciones");
         String imagenPortada = rs.getString("imagen_portada");
-        Float tarifaPorNoche = rs.getFloat("tarifa_por_noche");
+        Double tarifaPorNoche = rs.getDouble("tarifa_por_noche");
         String status = rs.getString("status");
         return new DtoSucursal(id,nombre,descripcion,pais,ciudad,direccion,dimension,numeroPisos,
                 numeroHabitaciones,imagenPortada,tarifaPorNoche,status);

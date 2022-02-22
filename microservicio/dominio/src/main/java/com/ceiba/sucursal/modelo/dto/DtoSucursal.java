@@ -18,6 +18,6 @@ public class DtoSucursal {
     private Integer numeroPisos;
     private Integer numeroHabitaciones;
     private String imagenPortada;
-    private Float tarifaPorNoche;
+    private Double tarifaPorNoche;
     private String status;
 }
