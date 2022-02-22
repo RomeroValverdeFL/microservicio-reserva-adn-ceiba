@@ -1,6 +1,6 @@
 create table usuario (
  id int(11) not null auto_increment,
- nombre varchar(5) not null,
+ nombre varchar(100) not null,
  email varchar(100) null,
  telefono varchar(100) null,
  ocupacion varchar(100) null,
@@ -16,7 +16,7 @@ create table usuario (
 
 create table sucursal (
  id int(11) not null auto_increment,
- nombre varchar(10) not null,
+ nombre varchar(5) not null,
  descripcion varchar(500) not null,
  pais varchar(100) not null,
  ciudad varchar(100) not null,
