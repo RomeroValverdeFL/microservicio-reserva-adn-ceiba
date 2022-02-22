@@ -1,7 +1,6 @@
 package com.ceiba.sucursal.puerto.dao;
 
 import com.ceiba.sucursal.modelo.dto.DtoSucursal;
-import com.ceiba.usuario.modelo.dto.DtoUsuario;
 
 import java.util.List;
 
