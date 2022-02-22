@@ -1,7 +1,15 @@
 create table usuario (
  id int(11) not null auto_increment,
  nombre varchar(100) not null,
+ email varchar(100) null,
+ telefono varchar(100) null,
+ ocupacion varchar(100) null,
  clave varchar(45) not null,
+ tipo_tarjeta varchar(15) null,
+ nombre_propietario_tarjeta varchar(100) null,
+ numero_tarjeta varchar(100) null,
+ fecha_expiracion_tarjeta varchar(100) null,
+ cvv_tarjeta varchar(100) null,
  fecha_creacion datetime null,
  primary key (id)
 );
