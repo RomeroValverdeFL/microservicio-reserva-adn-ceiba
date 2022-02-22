@@ -20,10 +20,18 @@ public class ConsultaSucursalMssql implements DaoSucursal {
     @SqlStatement(namespace= "sucursal", value="listarPorPais")
     private static String sqlListarPorPais;
 
+    @SqlStatement(namespace= "sucursal", value="listar")
+    private static String sqlListar;
+
     @Override
     public List<DtoSucursal> listarPorPais(String pais) {
         MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource();
         mapSqlParameterSource.addValue("pais", pais);
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListarPorPais,mapSqlParameterSource, new MapeoSucursal());
+    }
+
+    @Override
+    public List<DtoSucursal> listar() {
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoSucursal());
     }
 }

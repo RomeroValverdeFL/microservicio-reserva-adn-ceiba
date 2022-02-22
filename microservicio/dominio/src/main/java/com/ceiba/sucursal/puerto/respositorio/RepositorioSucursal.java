@@ -18,9 +18,9 @@ public interface RepositorioSucursal {
 
     /**
      * Permite eliminar un sucursal
-     * @param sucursal
+     * @param id
      */
-    void eliminar(Sucursal sucursal);
+    void eliminar(Long id);
 
     /**
      * Permite validar si existe una sucursal por nombre y direccion.

@@ -36,9 +36,9 @@ public class RepositorioSucursalMssql implements RepositorioSucursal {
     }
 
     @Override
-    public void eliminar(Sucursal sucursal) {
+    public void eliminar(Long id) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("idSucursal", sucursal.getId());
+        paramSource.addValue("idSucursal", id);
         this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);
     }
 
