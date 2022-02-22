@@ -1,13 +1,15 @@
-package com.ceiba.sucursal.modelo.dto;
+package com.ceiba.sucursal.comando;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-
-import java.util.Date;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
+@Setter
 @AllArgsConstructor
-public class DtoSucursal {
+@NoArgsConstructor
+public class ComandoSucursal {
     private Long id;
     private String nombre;
     private String descripcion;

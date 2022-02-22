@@ -5,19 +5,21 @@ import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 import com.ceiba.sucursal.modelo.entidad.Sucursal;
 import com.ceiba.sucursal.puerto.respositorio.RepositorioSucursal;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class RepositorioSucursalMssql implements RepositorioSucursal {
 
-    @SqlStatement(namespace="sql/sucursal", value="crear")
+    @SqlStatement(namespace="sucursal", value="crear")
     private static String sqlCrear;
 
-    @SqlStatement(namespace="sql/sucursal", value="actualizar")
+    @SqlStatement(namespace="sucursal", value="actualizar")
     private static String sqlActualizar;
 
-    @SqlStatement(namespace="sql/sucursal", value="eliminar")
+    @SqlStatement(namespace="sucursal", value="eliminar")
     private static String sqlEliminar;
 
-    @SqlStatement(namespace="sql/sucursal", value="existeSucursalPorNombreYDireccion")
+    @SqlStatement(namespace="sucursal", value="existeSucursalPorNombreYDireccion")
     private static String sqlExisteSucursalPorNombreYDireccion;
 
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;

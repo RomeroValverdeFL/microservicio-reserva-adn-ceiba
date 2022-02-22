@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class MapeoSucursal  implements RowMapper<DtoSucursal>, MapperResult {
     @Override
     public DtoSucursal mapRow(ResultSet rs, int rowNum) throws SQLException {
-        Integer id = rs.getInt("id");
+        Long id = rs.getLong("id");
         String nombre = rs.getString("nombre");
         String descripcion = rs.getString("descripcion");
         String pais = rs.getString("pais");
